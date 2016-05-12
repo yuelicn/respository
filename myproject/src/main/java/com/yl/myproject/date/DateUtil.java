@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Formatter;
 
 /**
  * 
@@ -146,5 +147,26 @@ public class DateUtil {
 
 		return String.valueOf(hours);
 
+	}
+	
+	
+	private static String getDateStr(long millis) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(millis);
+		SimpleDateFormat sdf = new SimpleDateFormat(PATTERN_HYPHEN_YYYYMMddHHmmss);
+		String stringFormatDate = sdf.format(cal);
+		System.out.println(stringFormatDate);
+		return stringFormatDate;
+		
+		}
+	
+	
+	public static void main(String[] args) {
+		int b = 1462782473;
+		Date dateOld = new Date(b); // 根据long类型的毫秒数生命一个date类型的时间
+ 		String sDateTime = getDateToString(dateOld, PATTERN_HYPHEN_YYYYMMddHHmmss); // 把date类型的时间转换为string
+ 		System.out.println(sDateTime);
+ 		System.out.println("12.12.12.12".lastIndexOf("."));
+	
 	}
 }
