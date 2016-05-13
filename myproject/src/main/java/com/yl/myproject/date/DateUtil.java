@@ -149,12 +149,21 @@ public class DateUtil {
 
 	}
 	
-	
+	/**
+	 * 
+	 * @Description: 将时间戳转换成String 类型时间
+	 * @param @param millis
+	 * @param @return   
+	 * @return String  
+	 * @throws
+	 * @author yue.li3
+	 * @date 2016年5月12日
+	 */
 	private static String getDateStr(long millis) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTimeInMillis(millis);
 		SimpleDateFormat sdf = new SimpleDateFormat(PATTERN_HYPHEN_YYYYMMddHHmmss);
-		String stringFormatDate = sdf.format(cal);
+		String stringFormatDate = sdf.format(cal.getTime());
 		System.out.println(stringFormatDate);
 		return stringFormatDate;
 		
@@ -165,7 +174,9 @@ public class DateUtil {
 		int b = 1462782473;
 		Date dateOld = new Date(b); // 根据long类型的毫秒数生命一个date类型的时间
  		String sDateTime = getDateToString(dateOld, PATTERN_HYPHEN_YYYYMMddHHmmss); // 把date类型的时间转换为string
- 		System.out.println(sDateTime);
+ 		System.out.println(System.currentTimeMillis());
+ 		System.out.println(getDateStr(System.currentTimeMillis()));
+ 		System.out.println(getDateStr(1463043719000l));
  		System.out.println("12.12.12.12".lastIndexOf("."));
 	
 	}
