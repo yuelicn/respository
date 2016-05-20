@@ -171,13 +171,18 @@ public class DateUtil {
 	
 	
 	public static void main(String[] args) {
-		int b = 1462782473;
+	/*	int b = 1462782473;
 		Date dateOld = new Date(b); // 根据long类型的毫秒数生命一个date类型的时间
  		String sDateTime = getDateToString(dateOld, PATTERN_HYPHEN_YYYYMMddHHmmss); // 把date类型的时间转换为string
- 		System.out.println(System.currentTimeMillis());
- 		System.out.println(getDateStr(System.currentTimeMillis()));
- 		System.out.println(getDateStr(1463043719000l));
- 		System.out.println("12.12.12.12".lastIndexOf("."));
-	
+ 		System.out.println(System.currentTimeMillis());*/
+ 		System.out.println(getDateStr(320532579400l));
+/*// 		System.out.println(getDateStr(1463043719000l));
+// 		System.out.println("12.12.12.12".lastIndexOf("."));
+ * 
+*/	
+ 		
+ 		System.out.println(-1L ^ (-1L << 5));
+ 		System.out.println((-1L << 5));
+ 		System.out.println((-1L << 2));
 	}
 }

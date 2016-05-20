@@ -19,7 +19,10 @@ public class EncryptionTest {
 	}
 	@Test
 	public void testSaEncode() {
-
+		
+		String a ="C20141114_E5Y3VK"+"B20141114_E5UDSK"+"36EE3D1BE055E9895B9C7888CCBD9FE986827F25DE9"+"1.1";
+		System.out.println(SHA.shaEncode(a));
+		
 		String psasword = SHA.shaEncode(PASSWORD);
 
 		assertEquals(PASSWORD_SHA1, psasword);
