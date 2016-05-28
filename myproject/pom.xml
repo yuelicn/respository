@@ -40,20 +40,24 @@
 			<version>2.1</version>
 		</dependency>
 
+	<!-- 	
 		<dependency>
 			<groupId>com.ios</groupId>
 			<artifactId>bcprov-jdk16-145</artifactId>
 			<version>1.6</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<dependency>
 			<groupId>com.ios</groupId>
 			<artifactId>javapns-jdk16-163</artifactId>
 			<version>1.6</version>
+		</dependency> -->
+
+
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
 		</dependency>
 		<!-- iso jar end -->
 

@@ -1,4 +1,4 @@
-package com.yl.myproject.ios;
+/*package com.yl.myproject.ios;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,3 +56,4 @@ public class IOSMessage {
 		sendIOSMessage(deviceToken,"111");
 	}
 }
+*/
