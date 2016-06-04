@@ -7,14 +7,14 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 public class Https {
-public static void main(String[] args) throws IOException {
+public static void main(String[] args) throws IOException, InstantiationException, IllegalAccessException {
 	// 创建URL对象
-	URL myURL = new URL("https://api.shtel.com.cn/openit/class_7");
+	URL myURL = new URL("https://222.68.185.223:7800/openit/class_7");
 
 	// 创建HttpsURLConnection对象，并设置其SSLSocketFactory对象
-	HttpsURLConnection httpsConn = (HttpsURLConnection) myURL
-	.openConnection();
-
+	HttpsURLConnection httpsConn = (HttpsURLConnection) myURL.openConnection();
+	//httpsConn.setHostnameVerifier(v);
+	HttpsURLConnection.setDefaultHostnameVerifier(new NullHostNameVerifier());
 	// 取得该连接的输入流，以读取响应内容
 	InputStreamReader insr = new InputStreamReader(httpsConn
 	.getInputStream());
