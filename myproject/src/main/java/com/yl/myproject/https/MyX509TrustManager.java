@@ -27,7 +27,7 @@ public class MyX509TrustManager implements X509TrustManager {
 	 */
 	X509TrustManager sunJSSEX509TrustManager;
 
-	MyX509TrustManager() throws Exception {
+	public MyX509TrustManager() throws Exception {
 		// create a "default" JSSE X509TrustManager.
 		KeyStore ks = KeyStore.getInstance("JKS");
 		ks.load(new FileInputStream("F:/Work/vianer/server.keystore"), "shdx123456".toCharArray());
@@ -97,6 +97,7 @@ public class MyX509TrustManager implements X509TrustManager {
 		// 创建HttpsURLConnection对象，并设置其SSLSocketFactory对象
 		HttpsURLConnection httpsConn = (HttpsURLConnection) myURL.openConnection();
 		httpsConn.setSSLSocketFactory(ssf);
+		httpsConn.setRequestMethod("GET");
 		httpsConn.setHostnameVerifier(new HostnameVerifier() {
 			@Override
 			public boolean verify(String hostname, SSLSession session) {
