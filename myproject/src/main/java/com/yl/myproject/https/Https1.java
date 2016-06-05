@@ -10,6 +10,11 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.SSLException;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.SSLSocket;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -18,6 +23,7 @@ import org.apache.http.client.params.ClientPNames;
 import org.apache.http.client.params.CookiePolicy;
 import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.conn.ssl.X509HostnameVerifier;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.util.EntityUtils;
@@ -41,7 +47,32 @@ public class Https1 {
 		//注册密匙库
 		SSLSocketFactory socketFactory = new SSLSocketFactory(trustStore);
 		//不校验域名
-		socketFactory.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+		socketFactory.setHostnameVerifier(new X509HostnameVerifier() {
+			
+			@Override
+			public boolean verify(String arg0, SSLSession arg1) {
+				// TODO Auto-generated method stub
+				return true;
+			}
+			
+			@Override
+			public void verify(String arg0, String[] arg1, String[] arg2) throws SSLException {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void verify(String arg0, X509Certificate arg1) throws SSLException {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void verify(String arg0, SSLSocket arg1) throws IOException {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		Scheme sch = new Scheme("https", 443, socketFactory);
 		client.getConnectionManager().getSchemeRegistry().register(sch);
 		HttpPost httppost1 = new HttpPost(PostFir);
