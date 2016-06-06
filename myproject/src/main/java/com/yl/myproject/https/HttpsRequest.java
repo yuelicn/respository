@@ -234,7 +234,7 @@ public class HttpsRequest{
      */
     public void setRequestConfig(RequestConfig requestConfig) {
         this.requestConfig = requestConfig;
-    }
+    }   
     
     public static void main(String[] args) throws Exception, IOException {
     	HttpsRequest http = new HttpsRequest();
