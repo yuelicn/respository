@@ -32,7 +32,8 @@ public class IdWorker1 {
 
     private long lastTimestamp = -1L;
 
-    public IdWorker1(final long workerId) {
+    @SuppressWarnings("static-access")
+	public IdWorker1(final long workerId) {
         super();
         if (workerId > this.maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(String.format(
@@ -42,7 +43,8 @@ public class IdWorker1 {
         this.workerId = workerId;
     }
 
-    public synchronized long nextId() {
+    @SuppressWarnings("static-access")
+	public synchronized long nextId() {
         long timestamp = this.timeGen();
         if (this.lastTimestamp == timestamp) {
             this.sequence = (this.sequence + 1) & this.sequenceMask;

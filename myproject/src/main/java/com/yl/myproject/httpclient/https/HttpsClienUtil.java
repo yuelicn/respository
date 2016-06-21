@@ -1,4 +1,4 @@
-package com.yl.myproject.https;
+package com.yl.myproject.httpclient.https;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;

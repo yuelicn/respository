@@ -22,7 +22,7 @@
  * 
  * 
  * 
- * 好莱坞法则 Do not call me ,we will call you 
+ * 好莱坞法则 Do not call us ,we will call you 
  * 钩子方法
  * 
  * @author yueli

@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-   
+
 	<dependencies>
 
 		<!-- log -->
@@ -32,27 +32,23 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.10</version>
 		</dependency>
-		<!-- log  end-->
+		<!-- log end -->
 		<!-- iso jar -->
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.1</version>
 		</dependency>
-
-	<!-- 	
 		<dependency>
-			<groupId>com.ios</groupId>
-			<artifactId>bcprov-jdk16-145</artifactId>
-			<version>1.6</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.7</version>
 		</dependency>
-		<dependency>
-			<groupId>com.ios</groupId>
-			<artifactId>javapns-jdk16-163</artifactId>
-			<version>1.6</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>com.ios</groupId> <artifactId>bcprov-jdk16-145</artifactId> 
+			<version>1.6</version> </dependency> <dependency> <groupId>com.ios</groupId> 
+			<artifactId>javapns-jdk16-163</artifactId> <version>1.6</version> </dependency> -->
 
-	<dependency>
+		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.3.5</version>
@@ -72,7 +68,11 @@
 			<artifactId>httpmime</artifactId>
 			<version>4.3.5</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.10</version>
+		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>

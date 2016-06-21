@@ -4,9 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author zhujuan From: https://github.com/twitter/snowflake An object that
- *         generates IDs. This is broken into a separate class in case we ever
- *         want to support multiple worker threads per process
+ * 
+ * ClassName: IdWorker 
+ * @Description: TODO
+ * @author yue.li3
+ * @date 2016年6月14日
  */
 public class IdWorker {
 
@@ -52,7 +54,6 @@ public class IdWorker {
 	private long sequenceMask = -1L ^ (-1L << sequenceBits);
 
 	private long lastTimestamp = -1L;
-
 	public IdWorker(long workerId, long datacenterId) {
 		// sanity check for workerId
 		
