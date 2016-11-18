@@ -34,6 +34,8 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.alibaba.fastjson.JSONObject;
+
 
 
 public class HttpsClienUtil{
@@ -277,7 +279,9 @@ public class HttpsClienUtil{
     @SuppressWarnings("static-access")
 	public static void main(String[] args) throws Exception, IOException {
     	HttpsClienUtil http = new HttpsClienUtil();
-    	String retult =http.sendPost("https://222.68.185.223:7800/openit/class_7?ServiceName=ComplexOrderORQueryFlow&ServiceVer=1.0&Consumer=shijihulian","",null);
+    	JSONObject json = new JSONObject();
+    	json.put("sign", "234567890");
+    	String retult =http.sendPost("https://recharge.service.azurenet.cn/notify/zhykNotice",json.toJSONString(),null);
 	System.out.println(retult);
     
     

@@ -1,8 +1,6 @@
 package com.yl.myproject.json;
 
-import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 
 //@JSONType(orders={"name","sex","age"})
 public class User {
@@ -38,13 +36,14 @@ public class User {
 	}
 
 	public static void main(String[] args) {
-		User user = new User();
+	/*	User user = new User();
 		user.setAge("sss");
 		// user.setSex("y");
 		user.setName("dddd");
 		Object json = JSONObject.toJSONString(user, SerializerFeature.SortField);
 		System.out.println(JSONObject.toJSONString(user));
-		System.out.println(json.toString());
+		System.out.println(json.toString());*/
+
 
 	}
 

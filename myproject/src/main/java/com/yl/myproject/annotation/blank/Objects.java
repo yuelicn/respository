@@ -39,8 +39,8 @@ public class Objects {
 				Method method = clzz.getMethod(methodName);
 
 				fieldVaule = method.invoke(o);
-				System.out.println(fieldName);
-				System.out.println(fieldVaule instanceof Object );
+			//	System.out.println(fieldName);
+			//	System.out.println(fieldVaule instanceof Object );
 				
 				
 				if (fieldVaule == null || "".equals(fieldVaule)) {

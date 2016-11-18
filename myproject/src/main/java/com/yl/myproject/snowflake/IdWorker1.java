@@ -89,7 +89,7 @@ public class IdWorker1 {
 
 
     public static void main(String[] args){
-        IdWorker1 worker2 = new IdWorker1(2);
+        IdWorker1 worker2 = new IdWorker1(5);
         for (int i = 0; i < 10; i++) {
 			
         	System.out.println(worker2.nextId());

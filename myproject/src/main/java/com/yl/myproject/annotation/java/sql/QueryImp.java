@@ -79,9 +79,8 @@ public class QueryImp implements Query {
 		
 		
 		
-	}
 	
 	
 	
-	
+	}	
 }

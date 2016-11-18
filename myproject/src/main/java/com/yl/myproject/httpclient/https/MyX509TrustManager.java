@@ -19,8 +19,10 @@ public class MyX509TrustManager implements X509TrustManager {
 
 	public MyX509TrustManager() throws Exception {
 		// create a "default" JSSE X509TrustManager.
+		String path = "E:/work/21vianet/vianet-cfg/sjhl/server.keystore";
+		String pswd = "sjhl123456";
 		KeyStore ks = KeyStore.getInstance("JKS");
-		ks.load(new FileInputStream("F:/Work/vianer/server.keystore"), "shdx123456".toCharArray());
+		ks.load(new FileInputStream(path), pswd.toCharArray());
 		TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509", "SunJSSE");
 		tmf.init(ks);
 		TrustManager tms[] = tmf.getTrustManagers();

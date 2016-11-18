@@ -13,7 +13,7 @@ public class SHA {
 	public static String shaEncode(String inStr)  {
 		MessageDigest sha = null;
 		try {
-			sha = MessageDigest.getInstance("SHA-1");
+			sha = MessageDigest.getInstance("SHA-256");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -35,5 +35,7 @@ public class SHA {
 		}
 		return hexValue.toString();
 	}
-
+public static void main(String[] args) {
+	System.out.println(shaEncode("1111111"));
+}
 }
